@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizza City</title>
+
+      <link href="logo.png" rel="icon" type="image/jpg" sizes="16x16" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<!-- libs for bootstrap css1 js2 -->
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- libs for fontawsome css5 js5 -->
+	<link  href="./assets/libs/fontawesomepro/css/brands.min.css" rel="stylesheet" type="text/css" />
+	<link  href="./assets/libs/fontawesomepro/css/solid.min.css" rel="stylesheet" type="text/css" />
+	<link  href="./assets/libs/fontawesomepro/css/duotone.min.css" rel="stylesheet" type="text/css" />
+	<link  href="./assets/libs/fontawesomepro/css/light.min.css" rel="stylesheet" type="text/css" />
+	<link  href="./assets/libs/fontawesomepro/css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- libs for selelect2 css1 js1-->
+</head>
+<style type="text/css">
+	.map{
+		width: 100%;
+		min-height: 40vh;
+	}
+
+	body{
+		height: 100%;
+		min-height: 100%;
+		max-height: 100%;
+	}
+
+	textarea {
+  margin:0px 0px;
+  padding:5px;
+  height:200px !important;
+  line-height:16px;
+  width:100%;
+  display:block;
+  margin:0px auto;    
+}
+</style>
+<body>
+	<a href="#" id="top"></a>
+
+	<div class="d-flex justify-content-center align-items-center bg-dark navbar-dark " style="height:160px  " >
+
+		<div class="navbar-brand mx-2"><img src="logo.png" width="100px" height="100px"  /> <br><span class="mx-2 "> <b> <i>Pizza City </i></b></span></div>
+		
+	</div>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark clearfix sticky-top">
+		
+				<button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+
+		<div class="navbar-collapse collapse  justify-content-center" id="nav">
+
+			<ul class="navbar-nav px-3">
+				<li class="nav-item px-4"><a href="#home" class="nav-link text-light fw-bold text-uppercase">Home</a></li>
+				<li class="nav-item dropdown px-4"><a href="menu" class="nav-link dropdown-toggle text-light fw-bold text-uppercase" data-bs-toggle="dropdown">Menu</a>
+					<ul class="dropdown-menu">
+					<li><a href="#pizza" class="dropdown-item">Pizza</a></li>
+					<li><a href="#dropdown" class="dropdown-item">Toppings</a></li>
+					<li><a href="#dropdown" class="dropdown-item">Drinks</a></li>					
+					<li><a href="#dropdown" class="dropdown-item">Snacks</a></li>
+					</ul>
+				</li>
+				<li class="nav-item px-4"><a href="#contact" class="nav-link text-light fw-bold text-uppercase">Contact</a></li>
+				<li class="nav-item px-4"><a href="#address" class="nav-link text-light fw-bold text-uppercase">Address</a></li>			
+				<li class="nav-item px-4"><a href="#discount" class="nav-link text-light fw-bold text-uppercase">Discounts</a></li>
+				<li class="nav-item px-4"><a href="#about" class="nav-link text-light fw-bold text-uppercase">About</a></li>
+			</ul>
+
+			
+		</div>
+
+	</nav>
+
+	<section id="home">
+		<div class="container-fluid">
+			<div class="row bg-dark justify-content-center align-items-center" style="height:100vh;">
+				<div class="col-sm-10 text-center">
+					<img src="pizzabg.png " width="700px" >
+					<h5 class="text-capitalize display-2 fst-italic"><span class="text-light">Worry less and eat more pizza !</span></h5>
+					
+					
+
+					<a href="#" class="btn btn-outline-light btn-lg  px-4 m-3" data-bs-toggle="modal" data-bs-target="#loginmodal">Order Now</a>
+					<a href="#" class="btn btn-outline-light btn-lg  px-4 m-3">Book Now</a>
+					
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="modal" id="loginmodal" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Login Here</h5>
+					<button class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div class="col-12">
+						<form action="" method="POST">
+							<div class="form-group mb-3">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" class="form-control form-control-sm rounded-0" placeholder="Enter your email" required>
+							</div>
+							<div class="form-group mb-3">
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password" class="form-control form-control-sm rounded-0" placeholder="Enter your password" required>
+							</div>
+
+							<div class="d-flex justify-content-end">
+								<button class="btn btn-secondary rounded-0 mx-3">Cancel</button>
+								<button class="btn btn-primary rounded-0">Login</button>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p>Not Registered ! , <a href="#">Signup Here</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="bg-dark" >
+		<div class="container-fluid">
+			<!-- Title -->
+			<div class="col-12 text-center">
+				<h1 class="text-light display-4 " id="pizza" > MENU</h1>
+				<h2 class="text-light mb-5 " >Less Drama, More Pizza !</h2>
+			</div>
+
+			<div class="row text-center">
+
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="cheesepizza.jpg" alt="Cheese Pizza" />
+				<div class="card-body">
+					<h5>Cheese Pizza</h5>
+					<p class="card-text"> Cheese pizza is one of the most popular choices. It will always be a simple, unadorned masterpiece on its own.</p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="veggiepizza.jpg" alt="Veggie Pizza" />
+				<div class="card-body">
+					<h5>Veggie Pizza</h5>
+					<p class="card-text"> Everything from peppers and mushrooms, to eggplant and onions make for an exciting and tasty veggie pizza.</p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="peppizza.jpg" alt="Pepperoni Pizza" />
+				<div class="card-body">
+					<h5>Pepperoni Pizza</h5>
+					<p class="card-text">There’s a reason this is one of the most popular types of pizza. Who doesn’t love biting into a crispy, salty round of pepperoni?</p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="bbqpizza.jpg" alt="BBQ Pizza" />
+				<div class="card-body">
+					<h5>BBQ Chicken Pizza</h5>
+					<p class="card-text"> If you love BBQ chicken and you love pizza, why not put them together? This has long been a cult favorite of sports fans and college kids. </p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="hawpizza.jpg" alt="Hawaiian Pizza" />
+				<div class="card-body">
+					<h5>Hawaiian Pizza</h5>
+					<p class="card-text"> Pineapple might not be the first thing that comes to mind when you think pizza.But it has solid sweet and salty combination taste. </p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="suppizza.jpg" alt="Supreme Pizza" />
+				<div class="card-body">
+					<h5>Supreme Pizza</h5>
+					<p class="card-text"> When you can’t decide which toppings to get, it’s time for the supreme pizza.It’s the combination of the flavors that really makes it sing. </p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="buffpizza.jpg" alt="Buffalo Pizza" />
+				<div class="card-body">
+					<h5> Buffalo Pizza</h5>
+					<p class="card-text">Who says your pizza has to be strictly tomato-sauce based? Branch out with some buffalo sauce on your pie. All its spicy, salty, and delicious. </p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+					<div class="card bg-secondary rounded-0">
+					<img src="meatpizza.jpg" alt=" Meat Pizza" />
+				<div class="card-body">
+					<h5> Meat Pizza</h5>
+					<p class="card-text"> If pepperoni just isn’t enough, and you’re looking for a pie with a bit more heft, a meat pizza is a perfect and popular choice.  </p>
+					<a href="#" class="btn btn-dark btn-sm rounded-0">Order Now</a>
+				</div>
+					</div>
+				</div>
+				<!-- <div class="container">
+					<div class="row justify-content-center">
+						<a href="#top" class="row col-2 btn btn-outline-light btn-lg px-4 m-3">Back to Top</a>
+					</div>
+				</div> -->
+					
+
+				
+			</div>
+
+
+			<div class="row text-center bg-dark warning" style="height:100vh;">
+				<h2 class="text-light mt-3" id="dropdown">Enjoy More Snacks !</h2>
+
+				<div class="container col-4">
+					<h3 class="text-light mb-3" >Toppings</h3>
+					<ol class="list-group">
+
+						<li class="list-group-item list-group-item-secondary btn btn-outline-secondary" > Pepperoni</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-primary"> Mushrooms</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-info"> Onions</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-success"> Sausage</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-danger"> Bacon</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-warning"> Extra Cheese</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-light"> Black olives</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-dark"> Green peppers</li>
+						
+					</ol>
+					
+				</div>
+
+				<div class="container col-4">
+					<h3 class="text-light mb-3" >Drinks</h3>
+					<ol class="list-group">
+
+						<li class="list-group-item list-group-item-secondary btn btn-outline-secondary" > Coke</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-primary"> Pepsi</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-info"> Soda</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-success"> Smoothie</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-danger"> Oreo Latte</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-warning"> Iced Coffee</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-light"> Cappuccino</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-dark"> Latte</li>
+						
+					</ol>
+					
+				</div>
+
+				<div class="container  col-4">
+					<h3 class="text-light mb-3">Snacks</h3>
+					<ol class="list-group">
+
+						<li class="list-group-item list-group-item-secondary btn btn-outline-secondary" > Cookie</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-primary"> Donut</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-info"> French Fris</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-success"> Cupcake</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-danger"> Chocolate Cake</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-warning"> Iced Coffee</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-light"> Fried Chicken</li>
+						<li class="list-group-item list-group-item-secondary btn btn-outline-dark"> Humbarger</li>
+						
+					</ol>
+					
+				</div>		
+						
+
+			</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- Start Contact Section -->
+			<section class="bg-dark" id="contact">
+				<div class="container-fluid">
+					<!-- start title -->
+			<div class="col-12 text-center">
+				<h1 class="text-light display-3 mb-3">Contact Us</h1>
+				<p class="text-light lead"><b>Please get in touch with us and our expert support team will answer all your questions.</b></p>
+			</div>
+			<!-- end title -->
+
+
+						<div class="row">
+
+
+						<!-- user 1 -->
+
+						<div class="col-lg-4 col-sm-10 mx-auto mb-4">
+							<div class="card rounded-0">
+								<img src="ceonayeon.jpg" alt="ppp" />
+								<div class="card-body">
+									<div class="card-title">
+										<h3 class="text-muted">Ms.Nayeon Im </h3>
+									</div>
+									<div class="card-subtitle">
+										<p class="text-secondary lead">Operation Manager</p>
+									</div>
+									<div class="float-end">
+										<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+										<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+										<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+										
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-sm-10 mx-auto mb-4">
+							<div class="card rounded-0">
+								<img src="ceojisoo.jpg" alt="CEO JISOO"  />
+								<div class="card-body">
+									<div class="card-title">
+										<h3 class="text-muted">Ms.Jisoo Kim</h3>
+									</div>
+									<div class="card-subtitle">
+										<p class="text-secondary lead">Manager</p>
+									</div>
+									<div class="float-end">
+										<a href="#" target="_blank"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+										<a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+										<a href="#" target="_blank"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+						
+
+						<div class="col-lg-4 col-sm-10 mx-auto mb-4">
+							<div class="card rounded-0">
+								<img src="ceobp.jpg" alt="ppp" />
+								<div class="card-body">
+									<div class="card-title">
+										<h3 class="text-muted">Mr.Brad Pitt</h3>
+									</div>
+									<div class="card-subtitle">
+										<p class="text-secondary lead">Ofice Manager</p>
+									</div>
+									<div class="float-end">
+										<a href="#" target="_blank"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+										<a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+										<a href="#" target="_blank"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+
+
+
+				</div> <!--end container -->
+
+			</section>
+
+
+
+
+				<!-- Start Contact Section -->
+			<section class="bg-dark" id="address">
+				<div class="container-fluid">
+					<!-- start title -->
+			<div class="col-12 text-center">
+				<h1 class="text-light display-3" id="address">Address</h1>
+				<!-- <p class="text-warning lead"><span>Please get in touch and our expert support team will answer all your questions.</span></p> -->
+			</div>
+			<!-- end title -->
+
+
+
+			<div class="row">
+					
+					<div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+						<div class="card">
+							<div class="card-title">
+								<h5>Shop Location</h5>
+							</div>
+							
+							<div class="card-body">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7400.127845999073!2d96.08285563488771!3d21.97050960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d8d07d47b25%3A0x15a2df74e2e9db95!2sThe%20Pizza%20Company!5e0!3m2!1sen!2smm!4v1620114354655!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="text-center container text-light col-lg-6 col-md-8 col-sm-10 mx-auto mt-5 display-6 ">
+						<h1 class="display-6">KEEP IN TOUCH</h1>
+
+						<h2 class="text-info"><i class="fas fa-phone-alt text-info"></i> Call Us</h2>
+						<small> 0944441011</small><br>
+						<small> 0944401011</small>
+
+						<h3 class="text-danger"><i class="far fa-envelope-open text-danger"></i> Send E-mail</h3>
+						<small> pizzacity@gmail.com</small><br>
+
+						<h3 class="text-primary"><i class="far fa-clock text-primary"></i> Opening Hours</h3>
+						<small>9 am to 10 pm</small><br>
+						<small>Mandalay, MYANMAR</small>
+
+					
+					</div>
+
+				</div> 
+				</div> 
+			</section>
+
+											<!-- Start Discount Section -->
+			<section class="bg-dark" style="height: 100vh;"  id="discount">
+				<div class="container-fluid">
+
+					<div class="col-12 text-center ">
+						<h2 class="text-info display-4" id="about">Don't Miss Out!</h2>
+					</div>
+
+				
+					
+					<!-- start title -->
+			<div class="row " >
+
+				<div class="col-lg-6 col-md-8 col-sm-10 mx-auto  ">
+						<div class=" text-light">
+							<h3 class="text-info text-center display-6 mb-2" >DISCOUNTS</h3>
+							
+							<p>Sign up for the latest <span class="text-info">DISCOUNTS</span> and <span class="text-info">COUPONS !</span></p>
+						</div>
+
+						<form action="" method="POST">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-12 mb-4 ">
+								<label for="email" class="text-light">Email Address</label>
+								<input type="email" name="email" id="email" class="form-control form-control-sm rounded-0" placeholder="Enter Your Email Address" />
+							</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+								<label for="dob" class="text-light">Birthday</label>
+								<input type="date" name="dob" id="dob" class="form-control form-control-sm rounded-0 " />
+							</div>
+								
+							</div>
+
+							
+
+							<div class="d-grid">
+								<button type="submit" class="btn btn-outline-light rounded-0">SIGN UP</button>
+							</div>
+
+							<div class="col-md-12 mt-3 mb-3 text-light">
+								<p>Your opinion is important to us. This way we can keep improving our website.<br>
+								 Leave some <span class="text-info">FEEDBACK</span> and get <span class="text-info"> FREE PEPSI !</span></p>
+								<label for="message">Message</label>
+								<textarea name="message" id="message" class="form-control" placeholder="Leave Feedback Here" rows="3"></textarea>
+							</div>
+
+							
+						</form>
+
+
+					</div>
+
+					<div class=" col-lg-6 col-md-8 col-sm-10 mx-auto text-light ">
+
+						<!-- <div >
+							<h2 class="text-info text-center display-6 ">The SPECIAL LIMITED Offer.</h2><br><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nunc lorem, ullamcorper sit amet mattis id, aliquet at lectus. Cras cursus elementum felis. Mauris sed lectus cursus, tristique purus a, volutpat mi. Fusce et accumsan ipsum, suscipit malesuada ex. Ut ornare dictum nunc.  Sed vel risus ante. </p>
+						</div> -->
+
+						<h3 class="text-info text-center display-6 mb-2">ABOUT US</h3>
+						<div class="text-center">
+							<br><br>
+						<small>"Sed quis tellus dui. Vestibulum mauris metus, pulvinar a urna vel, egestas eleifend ligula."</small><br>
+						<small>Quisque at ex ac magna efficitur euismod. Nam feugiat, felis et aliquet elementum, sapien leo pharetra erat, nec gravida libero sem accumsan arcu.</small><br><br>
+
+						</div>
+						
+						<div class="row ">
+							<div class="col-lg-4 col-md-8 col-sm-10">
+							<h5>SOCIAL MEDIA</h5>
+							<a href="#" class="text-light">Facebook</a><br>
+							<a href="#"  class="text-light">Twitter</a><br>
+							<a href="#" class="text-light">Instagram</a><br>
+							<a href="#" class="text-light">WhatsApp</a><br>
+							<a href="#"></a>
+						</div>
+
+						<div class="col-lg-4 col-md-8 col-sm-10">
+							<h5>CUSTOMER SERVICE</h5>
+							<a href="#" class="text-light">Contact Us</a><br>
+							<a href="#"  class="text-light">My Account</a><br>
+							<a href="#" class="text-light">Store Locater</a><br>
+							<a href="#" class="text-light">RedeemAwards</a>
+							<a href="#"></a>
+						</div>
+
+						<div class="col-lg-4 col-md-8 col-sm-10">
+							<h5>MORE TO EXPLORE</h5>
+							<a href="#" class="text-light">Latest News</a><br>
+							<a href="#" class="text-light">People's Choice</a><br>
+							<a href="#" class="text-light">Top Items</a><br>
+							<a href="#"  class="text-light">Offers</a><br>
+						</div>
+						</div>
+
+						<div class="text-center">
+							<br><br>
+						<small>"Sed quis tellus dui. Vestibulum mauris metus, pulvinar a urna vel, egestas eleifend ligula."</small><br>
+						<small>Quisque at ex ac magna efficitur euismod. Nam feugiat, felis et aliquet elementum, sapien leo pharetra erat, nec gravida libero sem accumsan arcu.</small>
+
+						</div>
+						
+						
+						
+
+					</div>
+
+					
+				</div>
+
+			</section>
+
+
+						
+
+			<!-- Footer -->
+			<footer class="bg-dark">
+				<div class="container-fluid">
+					<div class="col-12 text-center text-light">
+						
+
+					<div class="row ">
+						<div class="col-lg-4 col-md-8 col-sm-10 text-light text-right">
+							<h5 class="fst-italic text-light fw-light">COMMUNICATE</h5>
+							
+							<i>E-mail : </i>
+							<i>contactus@pizzacity.org</i>
+							<div class="container">
+					<div class="row justify-content-center">
+						<a href="#top" class="btn btn-dark btn-sm col-lg-2 col-md-8 col-sm-12  px-4 m-3 clearfix fixed-bottom">Back to Top</a>
+					</div>
+				</div>	
+							
+						</div>
+
+						<div class="col-lg-4 col-md-8 col-sm-10">
+							<h5 class="fst-italic text-light fw-light"s>FOLLOW US</h5>
+							<div class="btn-toolbar py-3">
+							<div class="btn-group align-items-center">
+								<button class="btn btn-dark"><i class="fab fa-facebook fa-2x mx-3"></i></button>
+								<button class="btn btn-dark"><i class="fab fa-twitter fa-2x mx-3 text-light"></i></button>
+								<button class="btn btn-dark"><i class="fab fa-youtube fa-2x mx-3"></i></button>
+								<button class="btn btn-dark"><i class="fab fa-instagram fa-2x mx-3"></i></button>								
+								<button class="btn btn-dark"><i class="fab fa-telegram-plane fa-2x mx-3"></i></button>
+										
+							</div>
+							</div>
+							
+						</div>
+
+						<div class="col-lg-4 col-md-8 col-sm-10">
+							<h5 class="fst-italic text-light fw-light text-uppercase">receive our special offers</h5>
+							<small>"Thank you to all of our customers for shopping with us."</small><br>
+							
+						</div>
+
+					</div>
+						
+						<p class="text-light m-0">&copy;2021. All Rights Reserved. Pizza City</p>
+					</div>
+				</div>
+
+			</footer>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-b61eb244-8d26-418c-8e18-9ae0cfbb952a"></div>
+<!-- libs for bootstrap css1 js2 -->
+<script src="./assets/libs/bootstrap/js/popper.min.js" type="text/javascript"></script>
+<script src="./assets/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- libs for jquery js1 -->
+<script src="./assets/libs/jquery/jquery.min.js" type="text/javascript"></script>
+<!-- libs for fontawsome css5 js5 -->
+	<script  src="./assets/libs/fontawesomepro/js/brands.min.js"></script>
+  <script  src="./assets/libs/fontawesomepro/js/solid.min.js"></script>
+  <script  src="./assets/libs/fontawesomepro/js/duotone.min.js"></script>
+  <script  src="./assets/libs/fontawesomepro/js/light.min.js"></script>
+  <script  src="./assets/libs/fontawesomepro/js/fontawesome.min.js"></script>
+
+<!-- libs for summernote css1 js1-->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <!-- libs for flatpickr css1 js1-->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+//select 2 - role
+		$("#role").select2();
+
+//summernote - bio
+		 $('#bio').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+
+//flatpickr - dob
+
+$("#dob").flatpickr({
+    altInput: true,
+  dateFormat: "YYYY-MM-DD",
+  altFormat: "DD-MM-YYYY",
+  allowInput: true,
+  parseDate: (datestr, format) => {
+    return moment(datestr, format, true).toDate();
+  },
+  formatDate: (date, format, locale) => {
+    // locale can also be used
+    return moment(date).format(format);
+});
+
+	});
+</script>
+
+</body>
+</html>
